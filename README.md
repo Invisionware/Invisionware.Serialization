@@ -4,7 +4,14 @@ Invisionware Frmaework is a collection of utilities classes, extension methods, 
 ## Serialization
 This portion of the Invisionware Framework is focused on simplifying serialization
 
-Add the following using statement
+[![NuGet](https://img.shields.io/nuget/v/Invisionware.Serialization.svg)](https://www.nuget.org/packages/Invisionware.Serialization)
+
+Packages related to Invisionware Serialziation
+```powershell
+Install-Package Invisionware.Serialization
+```
+
+Then just add the following using statement
 ```c#
 using Invisionware.Serialization;
 ```
