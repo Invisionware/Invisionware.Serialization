@@ -2,35 +2,24 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Invisionware.Serialization</id>
-		<version>1.1.4</version>
+		<version>1.0.0-pre06</version>
 		<title>Invisionware.Serialization</title>
 		<authors>ravensorb</authors>
 		<owners>ravensorb</owners>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>Contains various extension methods for Serialization</description>
-		<summary>Contains various extension methods Serialization</summary>
 		<projectUrl>https://github.com/Invisionware/Serialization</projectUrl>
 		<licenseUrl>https://raw.githubusercontent.com/Invisionware/Serialization/master/LICENSE</licenseUrl>
-		<releaseNotes></releaseNotes>
-		<copyright>(c) 2016 Invisionware</copyright>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>This package implements the core Serialization provider contracts as well as various extension methods for Serialization</description>
+		<summary>This package implements the core Serialization provider contracts as well as various extension methods for Serialization</summary>
+		<releaseNotes>Updated to included ported version of XLabs Serialization framework</releaseNotes>
+		<copyright>(c) 2018 Invisionware</copyright>
 		<language>en-US</language>
-		<tags>dictionary</tags>
-		<dependencies>
-			<dependency id="Serilog" version="2.2.1" />
-		</dependencies>
+		<tags>dictionary xml json serialization serialize invisionware</tags>
 	</metadata>
 	<files>
 		<!-- Framework: Portable Profile 259 -->
 		<file src="..\src\Invisionware.Serialization\bin\$Configuration$\netstandard1.0\Invisionware.Serialization.dll" target="lib\portable-net45+win8+wpa81+wp8+monoandroid+monotouch+xamarinios+xamarinmac" />
 		<file src="..\src\Invisionware.Serialization\bin\$Configuration$\netstandard1.0\Invisionware.Serialization.pdb" target="lib\portable-net45+win8+wpa81+wp8+monoandroid+monotouch+xamarinios+xamarinmac" />
-
-		<!-- Framework: Portable Profile 111 -->
-		<file src="..\src\Invisionware.Serialization\bin\$Configuration$\netstandard1.0\Invisionware.Serialization.dll" target="lib\portable-net45+win8+wpa81+monoandroid+monotouch+xamarinios+xamarinmac" />
-		<file src="..\src\Invisionware.Serialization\bin\$Configuration$\netstandard1.0\Invisionware.Serialization.pdb" target="lib\portable-net45+win8+wpa81+monoandroid+monotouch+xamarinios+xamarinmac" />
-
-		<!-- Framework: Portable Profile 78 -->
-		<file src="..\src\Invisionware.Serialization\bin\$Configuration$\netstandard1.0\Invisionware.Serialization.dll" target="lib\portable-net45+win8+wp8+monoandroid+monotouch+xamarinios+xamarinmac" />
-		<file src="..\src\Invisionware.Serialization\bin\$Configuration$\netstandard1.0\Invisionware.Serialization.pdb" target="lib\portable-net45+win8+wp8+monoandroid+monotouch+xamarinios+xamarinmac" />
 
 		<!-- Framework: NetStandard1.0 -->
 		<file src="..\src\Invisionware.Serialization\bin\$Configuration$\netstandard1.0\Invisionware.Serialization.dll" target="lib\NetStandard1.0" />

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Invisionware.Net.WebUtils
+namespace Invisionware.Serialization
 {
 	/// <summary>
 	/// Used to defeine if and how a class/interface field/property will be serialized as a dictionary element.

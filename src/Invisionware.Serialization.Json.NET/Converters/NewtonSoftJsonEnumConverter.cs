@@ -1,9 +1,9 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Linq;
 using System.Reflection;
+using Newtonsoft.Json;
 
-namespace Invisionware.Serialization
+namespace Invisionware.Serialization.JsonNET.Converters
 {
 	class NewtonSoftJsonEnumConverter : Newtonsoft.Json.Converters.StringEnumConverter
 	{
@@ -16,7 +16,7 @@ namespace Invisionware.Serialization
 		/// <exception cref="System.InvalidOperationException">Only type Enum is supported</exception>
 		/// <exception cref="System.ArgumentException">Enum not found</exception>
 		/// TODO Edit XML Comment Template for WriteJson
-		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+		public override void WriteJson(JsonWriter writer, object value, Newtonsoft.Json.JsonSerializer serializer)
 		{
 			var type = value.GetType();
 
@@ -50,7 +50,7 @@ namespace Invisionware.Serialization
 		/// Only type Enum is supported
 		/// </exception>
 		/// TODO Edit XML Comment Template for ReadJson
-		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, Newtonsoft.Json.JsonSerializer serializer)
 		{
 			var enumString = (string)reader.Value;
 

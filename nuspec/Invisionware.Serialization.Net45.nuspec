@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+	<metadata>
+		<id>Invisionware.Serialization.NET45</id>
+		<version>1.0.0-pre06</version>
+		<title>Invisionware.Serialization.NET45</title>
+		<authors>ravensorb</authors>
+		<owners>ravensorb</owners>
+		<projectUrl>https://github.com/Invisionware/Serialization</projectUrl>
+		<licenseUrl>https://raw.githubusercontent.com/Invisionware/Serialization/master/LICENSE</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>This package implements the Serialization provider contracts for serializers supported in full ASP.NET 4.5 framework</description>
+		<summary>This package implements the Serialization provider contracts for serializers supported in full ASP.NET 4.5 framework</summary>
+		<releaseNotes>Updated to included ported version of XLabs Serialization framework</releaseNotes>
+		<copyright>(c) 2018 Invisionware</copyright>
+		<tags>dictionary xml json serialization serialize invisionware datacontract</tags>
+		<dependencies>
+			<group>
+				<dependency id="Invisionware.Serialization" version="1.1.4" />
+			</group>
+		</dependencies>
+	</metadata>
+	<files>
+		<!-- Content Files -->
+		<!-- file src="..\..\docs\Invisionware.Serialization.NET45.Readme.md" target="content" -->
+
+		<!-- Assemblies: .NET Standard 1.1 -->
+		<file src="..\src\Invisionware.Serialization.NET45\bin\$configuration$\netstandard1.1\Invisionware.Serialization.NET45.dll" target="lib\netstandard1.1" />
+		<file src="..\src\Invisionware.Serialization.NET45\bin\$configuration$\netstandard1.1\Invisionware.Serialization.NET45.pdb" target="lib\netstandard1.1" />
+	</files>
+</package>

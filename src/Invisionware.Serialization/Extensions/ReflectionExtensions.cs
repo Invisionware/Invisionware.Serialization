@@ -5,7 +5,7 @@ using System.Reflection;
 namespace Invisionware.Serialization
 {
 	public static class ReflectionExtensions
-    {
+	{
 		//public static IEnumerable<T> GetCustomAttributesIncludingBaseInterfaces<T>(this Type type) where T : Attribute
 		//{
 		//    var result =

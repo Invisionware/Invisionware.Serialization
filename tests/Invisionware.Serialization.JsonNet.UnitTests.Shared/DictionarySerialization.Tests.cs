@@ -1,12 +1,12 @@
-﻿using FluentAssertions;
-using Invisionware.Net.WebUtils;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Xml.Serialization;
+using FluentAssertions;
+using Invisionware.Serialization.JsonNET;
 
-namespace Invisionware.Serialization.Tests
+namespace Invisionware.Serialization.UnitTests
 {
 	[TestFixture]
 	public class DictionarySerializationTests
@@ -42,7 +42,7 @@ namespace Invisionware.Serialization.Tests
 		{
 			var obj = new DictionaryObjectTestClass1();
 			var result = obj.SerializeToDictionary();
-
+			
 			result.Should().NotBeNull("Dictionary creation failed");
 			result.Should().Contain("Param1", "Class1%20Value");
 			result.Should().Contain("Param2", "1");
@@ -96,21 +96,21 @@ namespace Invisionware.Serialization.Tests
 			result.Should().NotBeNull("Dictionary creation failed");
 			result.Should().Contain("someParam1Json", "Class2Value");
 			result.Should().Contain("someParam2", "2");
-			result.Should().Contain("someParamList1Xml", "listItem1%2ClistItem2%2ClistItem3");
+			//result.Should().Contain("someParamList1Xml", "listItem1%2ClistItem2%2ClistItem3");
 		}
 
-		[Test]
-		public void TestXmlElementPropertyName()
-		{
-			var obj = new DictionaryObjectTestClass2();
-			var result = obj.SerializeToDictionary();
+		//[Test]
+		//public void TestXmlElementPropertyName()
+		//{
+		//	var obj = new DictionaryObjectTestClass2();
+		//	var result = obj.SerializeToDictionary();
 
-			result.Should().NotBeNull("Dictionary creation failed");
-			result.Should().Contain("someParam1Json", "Class2Value");
-			result.Should().NotContain("someParam1", "Class2Value");
-			result.Should().Contain("someParam2", "2");
-			result.Should().Contain("someParamList1Xml", "listItem1%2ClistItem2%2ClistItem3");
-		}
+		//	result.Should().NotBeNull("Dictionary creation failed");
+		//	result.Should().Contain("someParam1Json", "Class2Value");
+		//	result.Should().NotContain("someParam1", "Class2Value");
+		//	result.Should().Contain("someParam2", "2");
+		//	result.Should().Contain("someParamList1Xml", "listItem1%2ClistItem2%2ClistItem3");
+		//}
 
 		[Test]
 		public void TestMultipleAttributePropertyName()

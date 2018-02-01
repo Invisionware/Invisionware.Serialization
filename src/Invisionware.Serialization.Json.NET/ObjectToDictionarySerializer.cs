@@ -1,13 +1,25 @@
-﻿using Invisionware.Net.WebUtils;
-using Newtonsoft.Json;
+﻿// ***********************************************************************
+// Assembly         : Invisionware.Serialization.Json.NET
+// Author           : Shawn Anderson
+// Created          : 01-31-2018
+//
+// Last Modified By : Shawn Anderson
+// Last Modified On : 01-31-2018
+// ***********************************************************************
+// <copyright file="ObjectToDictionarySerializer.cs" company="Invisionware.Serialization.Json.NET">
+//     Copyright (c) Blockchain LLama. All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Xml.Serialization;
+using Newtonsoft.Json;
 
-namespace Invisionware.Serialization
+namespace Invisionware.Serialization.JsonNET
 {
 	public static class ObjectToDictionarySerializer
 	{
@@ -112,13 +124,13 @@ namespace Invisionware.Serialization
 			/// Gets the XML element attribute.
 			/// </summary>
 			/// <value>The XML element attribute.</value>
-			public XmlElementAttribute XmlElementAttribute { get { return Property.GetCustomAttributeIncludingInterfaces<XmlElementAttribute>(); } }
+			//public XmlElementAttribute XmlElementAttribute { get { return Property.GetCustomAttributeIncludingInterfaces<XmlElementAttribute>(); } }
 			/// <summary>
 			/// Gets a formatted versio nof the name (looks at attributes first)
 			/// Order: DictionaryElementAttribute, JsonPropertyAttribute, XmlElementAttribute, and then field name
 			/// </summary>
 			/// <value>The name of the formatted.</value>
-			public string FormattedName { get { return DictionaryItemPropertyAttribute?.Name ?? JsonPropertyAttribute?.PropertyName ?? XmlElementAttribute?.ElementName ?? Name; } }
+			public string FormattedName { get { return DictionaryItemPropertyAttribute?.Name ?? JsonPropertyAttribute?.PropertyName ?? Name /*?? XmlElementAttribute?.ElementName */; } }
 			/// <summary>
 			/// Gets or sets the formatted value.
 			/// </summary>
