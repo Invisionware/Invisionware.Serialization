@@ -2,17 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Invisionware.Serialization</id>
-		<version>1.1.16-pre01</version>
+		<version>1.1.16-pre02</version>
 		<title>Invisionware.Serialization</title>
-		<authors>ravensorb</authors>
-		<owners>ravensorb</owners>
+		<authors>Invisionware</authors>
+		<owners>Invisionware</owners>
 		<projectUrl>https://github.com/Invisionware/Serialization</projectUrl>
 		<licenseUrl>https://raw.githubusercontent.com/Invisionware/Serialization/master/LICENSE</licenseUrl>
+		<iconUrl>https://github.com/Invisionware/Serialization/raw/master/logo.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>This package implements the core Serialization provider contracts as well as various extension methods for Serialization</description>
 		<summary>This package implements the core Serialization provider contracts as well as various extension methods for Serialization</summary>
 		<releaseNotes>Updated to included ported version of XLabs Serialization framework</releaseNotes>
-		<copyright>(c) 2018 Invisionware</copyright>
+		<copyright>Copyright © 2018 Invisionware</copyright>
 		<language>en-US</language>
 		<tags>dictionary xml json serialization serialize invisionware</tags>
 	</metadata>
