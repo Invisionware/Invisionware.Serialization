@@ -1,7 +1,5 @@
 using System;
-using System.Collections.ObjectModel;
 using System.Diagnostics;
-using Invisionware.Serialization.UnitTests.DataObjects;
 using TextSerializationTests;
 using NUnit.Framework;
 
@@ -10,6 +8,9 @@ namespace Invisionware.Serialization.UnitTests
 	[TestFixture()]
 	public abstract class CanSerializerTests
 	{
+		Func<DateTime, DateTime, bool> _funcDateTimeEquality = (item1, item2) => DateTime.Equals(item1.Date, item2.Date);
+		Func<DateTimeOffset, DateTimeOffset, bool> _funcDateTimeOffSetEquality = (item1, item2) => DateTimeOffset.Equals(item1.Date, item2.Date);
+
 		protected abstract ISerializer Serializer { get; }
 
 		[Test()]
@@ -93,42 +94,42 @@ namespace Invisionware.Serialization.UnitTests
 		public void CanSerializeDateTimeAsString()
 		{
 			var p = DateTime.Now;
-			Assert.IsTrue(this.Serializer.CanSerializeString<DateTime>(p));
+			Assert.IsTrue(this.Serializer.CanSerializeString<DateTime>(p, _funcDateTimeEquality));
 		}
 
 		[Test()]
 		public void CanSerializeDateTimeAsByte()
 		{
 			var p = DateTime.Now;
-			Assert.IsTrue(this.Serializer.CanSerializeBytes<DateTime>(p));
+			Assert.IsTrue(this.Serializer.CanSerializeBytes<DateTime>(p, _funcDateTimeEquality));
 		}
 
 		[Test()]
 		public void CanSerializeDateTimeAsStream()
 		{
 			var p = DateTime.Now;
-			Assert.IsTrue(this.Serializer.CanSerializeStream<DateTime>(p));
+			Assert.IsTrue(this.Serializer.CanSerializeStream<DateTime>(p, _funcDateTimeEquality));
 		}
 
 		[Test()]
 		public void CanSerializeDateTimeOffsetAsString()
 		{
 			var p = new DateTimeOffset(DateTime.Now);
-			Assert.IsTrue(this.Serializer.CanSerializeString<DateTimeOffset>(p));
+			Assert.IsTrue(this.Serializer.CanSerializeString<DateTimeOffset>(p, _funcDateTimeOffSetEquality));
 		}
 
 		[Test()]
 		public void CanSerializeDateTimeOffsetAsByte()
 		{
 			var p = new DateTimeOffset(DateTime.Now);
-			Assert.IsTrue(this.Serializer.CanSerializeBytes<DateTimeOffset>(p));
+			Assert.IsTrue(this.Serializer.CanSerializeBytes<DateTimeOffset>(p, _funcDateTimeOffSetEquality));
 		}
 
 		[Test()]
 		public void CanSerializeDateTimeOffsetAsStream()
 		{
 			var p = new DateTimeOffset(DateTime.Now);
-			Assert.IsTrue(this.Serializer.CanSerializeStream<DateTimeOffset>(p));
+			Assert.IsTrue(this.Serializer.CanSerializeStream<DateTimeOffset>(p, _funcDateTimeOffSetEquality));
 		}
 
 		[Test()]

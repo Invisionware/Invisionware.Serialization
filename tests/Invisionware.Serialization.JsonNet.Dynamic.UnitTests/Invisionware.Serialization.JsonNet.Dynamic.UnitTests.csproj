@@ -4,12 +4,12 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
-
-    <RootNamespace>Invisionware.Serialization.UnitTests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.1.2" />
+    <PackageReference Include="Invisionware.Core" Version="1.0.0-pre02" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="nunit" Version="3.9.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.9.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.0" />
@@ -17,9 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Invisionware.Serialization\Invisionware.Serialization.csproj" />
+    <ProjectReference Include="..\..\src\Invisionware.Serialization.JsonNet.Dynamic\Invisionware.Serialization.JsonNet.Dynamic.csproj" />
   </ItemGroup>
-
-  <Import Project="..\Invisionware.Serialization.UnitTests.Shared\Invisionware.Serialization.UnitTests.Shared.projitems" Label="Shared" />
 
 </Project>

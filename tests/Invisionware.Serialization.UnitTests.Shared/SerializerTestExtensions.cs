@@ -1,3 +1,4 @@
+using System;
 using Invisionware.Serialization;
 
 namespace Invisionware.Serialization.UnitTests
@@ -9,37 +10,43 @@ namespace Invisionware.Serialization.UnitTests
 
     public static class SerializerTestExtensions
     {
-        public static bool CanSerializeString<T>(this IStringSerializer serializer, T item)
+        public static bool CanSerializeString<T>(this IStringSerializer serializer, T item, Func<T, T, bool> equalityFunc = null)
         {
-            var text = serializer.Serialize(item);
+	        if (equalityFunc == null) equalityFunc = (item1, item2) => item1.Equals(item2);
+
+			var text = serializer.Serialize(item);
 
             var obj = serializer.Deserialize<T>(text);
 
-            return obj.Equals(item);
+	        return equalityFunc(obj, item);
         }
 
-        public static bool CanSerializeBytes<T>(this IByteSerializer serializer, T item)
+		public static bool CanSerializeBytes<T>(this IByteSerializer serializer, T item, Func<T, T, bool> equalityFunc = null)
         {
+	        if (equalityFunc == null) equalityFunc = (item1, item2) => item1.Equals(item2);
+
             var text = serializer.SerializeToBytes(item);
 
             var obj = serializer.Deserialize<T>(text);
 
-            return obj.Equals(item);
+	        return equalityFunc(obj, item);
         }
 
-        public static bool CanSerializeStream<T>(this IStreamSerializer serializer, T item)
+		public static bool CanSerializeStream<T>(this IStreamSerializer serializer, T item, Func<T, T, bool> equalityFunc = null)
         {
+	        if (equalityFunc == null) equalityFunc = (item1, item2) => item1.Equals(item2);
+
             var encoder = Encoding.UTF8;
             using (var stream = new StreamReader(new MemoryStream(), encoder))
             {
                 serializer.Serialize<T>(item, stream.BaseStream);
                 stream.BaseStream.Position = 0;
                 var obj = serializer.Deserialize<T>(stream.BaseStream);
-                return obj.Equals(item);
+                return equalityFunc(obj, item);
             }
         }
 
-        public static bool CanSerializeEnumerable<T>(this ISerializer serializer, IEnumerable<T> list)
+        public static bool CanSerializeEnumerable<T>(this ISerializer serializer, IEnumerable<T> list, Func<T, T, bool> equalityFunc = null)
         {
             var text = serializer.Serialize(list);
 
