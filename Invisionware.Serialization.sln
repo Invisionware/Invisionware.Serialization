@@ -7,7 +7,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{A31F0DBA-7B31-40C8-9887-2E51BD76D565}"
 	ProjectSection(SolutionItems) = preProject
 		nuspec\Invisionware.Serialization.ASPNet.nuspec = nuspec\Invisionware.Serialization.ASPNet.nuspec
-		nuspec\Invisionware.Serialization.JsonNet.Dynamic.nuspec = nuspec\Invisionware.Serialization.JsonNet.Dynamic.nuspec
 		nuspec\Invisionware.Serialization.JsonNet.nuspec = nuspec\Invisionware.Serialization.JsonNet.nuspec
 		nuspec\Invisionware.Serialization.Net45.nuspec = nuspec\Invisionware.Serialization.Net45.nuspec
 		nuspec\Invisionware.Serialization.nuspec = nuspec\Invisionware.Serialization.nuspec
@@ -16,9 +15,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".misc", ".misc", "{B67DBE97-2A64-4E27-8878-698FC381DABD}"
 	ProjectSection(SolutionItems) = preProject
 		build.cake = build.cake
+		build.settings.json = build.settings.json
+		build.version.json = build.version.json
 		README.md = README.md
-		settings.json = settings.json
-		version.json = version.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FC9A0D21-3049-40EF-B6F1-55DA2CB685F3}"
@@ -57,10 +56,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.NetCore.UnitTests", "tests\Invisionware.Serialization.NetCore.UnitTests\Invisionware.Serialization.NetCore.UnitTests.csproj", "{C38891E2-C944-4E16-84F4-613F2E72395A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Serialization.Net45.UnitTests", "tests\Invisionware.Serialization.Net45.UnitTests\Invisionware.Serialization.Net45.UnitTests.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.JsonNet.Dynamic", "src\Invisionware.Serialization.JsonNet.Dynamic\Invisionware.Serialization.JsonNet.Dynamic.csproj", "{7672876E-2456-4498-A8BC-AB958C0F9A62}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.JsonNet.Dynamic.UnitTests", "tests\Invisionware.Serialization.JsonNet.Dynamic.UnitTests\Invisionware.Serialization.JsonNet.Dynamic.UnitTests.csproj", "{9242429A-8202-4BF2-9B61-BC1A67CC84FF}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -209,38 +204,6 @@ Global
 		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|x64.Build.0 = Release|Any CPU
 		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|x86.ActiveCfg = Release|Any CPU
 		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|x86.Build.0 = Release|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Debug|ARM.Build.0 = Debug|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Debug|x64.Build.0 = Debug|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Debug|x86.Build.0 = Debug|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Release|ARM.ActiveCfg = Release|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Release|ARM.Build.0 = Release|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Release|x64.ActiveCfg = Release|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Release|x64.Build.0 = Release|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Release|x86.ActiveCfg = Release|Any CPU
-		{7672876E-2456-4498-A8BC-AB958C0F9A62}.Release|x86.Build.0 = Release|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Debug|ARM.Build.0 = Debug|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Debug|x64.Build.0 = Debug|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Debug|x86.Build.0 = Debug|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Release|ARM.ActiveCfg = Release|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Release|ARM.Build.0 = Release|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Release|x64.ActiveCfg = Release|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Release|x64.Build.0 = Release|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Release|x86.ActiveCfg = Release|Any CPU
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -261,8 +224,6 @@ Global
 		{4BE9C1C6-EBAC-4ABC-9C93-2F0D5AEFD76F} = {FC9A0D21-3049-40EF-B6F1-55DA2CB685F3}
 		{C38891E2-C944-4E16-84F4-613F2E72395A} = {4BE9C1C6-EBAC-4ABC-9C93-2F0D5AEFD76F}
 		{8EDF4429-251A-416D-BB68-93F227191BCF} = {4A9F27C4-EE0B-4215-A87D-3178CF0A567C}
-		{7672876E-2456-4498-A8BC-AB958C0F9A62} = {030783D5-8B49-446B-B4BD-623CE9C87C7E}
-		{9242429A-8202-4BF2-9B61-BC1A67CC84FF} = {FC9A0D21-3049-40EF-B6F1-55DA2CB685F3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4D8C0137-1AD0-43D0-8D89-88586B0DE139}
