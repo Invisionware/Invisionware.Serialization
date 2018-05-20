@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Invisionware.Serialization</id>
-		<version>1.0.0</version>
+		<version>1.1.16</version>
 		<title>Invisionware.Serialization</title>
 		<authors>Invisionware</authors>
 		<owners>Invisionware</owners>
