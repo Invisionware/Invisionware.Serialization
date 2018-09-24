@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Invisionware.Serialization.JSON</id>
-		<version>1.1.16</version>
+		<version>1.1.17</version>
 		<title>Invisionware.Serialization.JSON</title>
 		<authors>Invisionware</authors>
 		<owners>Invisionware</owners>
@@ -17,7 +17,7 @@
 		<tags>dictionary xml json serialization serialize invisionware jsonnet</tags>
 		<dependencies>
 			<group>
-				<dependency id="Invisionware.Serialization" version="1.1.16" />
+				<dependency id="Invisionware.Serialization" version="1.1.17" />
 				<dependency id="Newtonsoft.Json" version="9.0.1" />
 			</group>
 		</dependencies>
@@ -26,8 +26,8 @@
 		<!-- Content Files -->
 		<!-- file src="..\..\docs\Invisionware.Serialization.JsonNET.Readme.md" target="content" -->
 
-		<!-- Assemblies: .NET Standard 2.0 -->
-		<file src="..\src\Invisionware.Serialization.Json.NET\bin\$configuration$\netstandard2.0\Invisionware.Serialization.JsonNET.dll" target="lib\netstandard2.0" />
-		<file src="..\src\Invisionware.Serialization.Json.NET\bin\$configuration$\netstandard2.0\Invisionware.Serialization.JsonNET.pdb" target="lib\netstandard2.0" />
+		<!-- Assemblies: .NET Standard 1.7 -->
+		<file src="..\src\Invisionware.Serialization.Json.NET\bin\$configuration$\netstandard1.1\Invisionware.Serialization.JsonNET.dll" target="lib\netstandard1.1" />
+		<file src="..\src\Invisionware.Serialization.Json.NET\bin\$configuration$\netstandard1.1\Invisionware.Serialization.JsonNET.pdb" target="lib\netstandard1.1" />
 	</files>
 </package>
