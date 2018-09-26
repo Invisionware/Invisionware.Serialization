@@ -18,6 +18,10 @@
 		<dependencies>
 			<group>
 				<dependency id="Invisionware.Serialization" version="1.1.16" />
+
+				<dependency id="System.Runtime.Serialization.Json" version="4.3.0" />
+				<dependency id="System.Runtime.Serialization.Xml" version="4.3.0" />
+
 			</group>
 		</dependencies>
 	</metadata>
@@ -26,7 +30,7 @@
 		<!-- file src="..\..\docs\Invisionware.Serialization.NET45.Readme.md" target="content" -->
 
 		<!-- Assemblies: .NET Standard 1.1 -->
-		<file src="..\src\Invisionware.Serialization.NET45\bin\$configuration$\netstandard1.1\Invisionware.Serialization.NET45.dll" target="lib\netstandard1.1" />
-		<file src="..\src\Invisionware.Serialization.NET45\bin\$configuration$\netstandard1.1\Invisionware.Serialization.NET45.pdb" target="lib\netstandard1.1" />
+		<file src="..\src\Invisionware.Serialization.NET\bin\$configuration$\netstandard1.1\Invisionware.Serialization.NET.dll" target="lib\netstandard1.1" />
+		<file src="..\src\Invisionware.Serialization.NET\bin\$configuration$\netstandard1.1\Invisionware.Serialization.NET.pdb" target="lib\netstandard1.1" />
 	</files>
 </package>

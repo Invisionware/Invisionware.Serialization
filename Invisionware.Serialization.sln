@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.JsonNET", "src\Invisionware.Serialization.Json.NET\Invisionware.Serialization.JsonNET.csproj", "{F30C1800-3FBE-4C9E-9296-613F44D00C17}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.Net45", "src\Invisionware.Serialization.Net45\Invisionware.Serialization.Net45.csproj", "{56878017-0F60-4103-B66D-1843C2F28DCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.Net", "src\Invisionware.Serialization.Net\Invisionware.Serialization.Net.csproj", "{56878017-0F60-4103-B66D-1843C2F28DCD}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Invisionware.Serialization.UnitTests.Shared", "tests\Invisionware.Serialization.UnitTests.Shared\Invisionware.Serialization.UnitTests.Shared.shproj", "{2951C80D-FCE7-4CA3-BDCF-B88C3477C66C}"
 EndProject
