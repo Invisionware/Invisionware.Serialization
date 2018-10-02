@@ -50,7 +50,7 @@ namespace Invisionware.Serialization.ASPNET
 		/// <param name="type">The type to deserialize.</param>
 		public override bool CanReadType(Type type)
 		{
-			if (type == null) throw new ArgumentNullException("type");
+			if (type == null) throw new ArgumentNullException(nameof(type));
 			return true;
 		}
 
@@ -65,7 +65,7 @@ namespace Invisionware.Serialization.ASPNET
 		/// <param name="type">The type to serialize.</param>
 		public override bool CanWriteType(Type type)
 		{
-			if (type == null) throw new ArgumentNullException("type");
+			if (type == null) throw new ArgumentNullException(nameof(type));
 			return true;
 		}
 

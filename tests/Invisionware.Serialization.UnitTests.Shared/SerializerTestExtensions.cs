@@ -1,14 +1,13 @@
 using System;
-using Invisionware.Serialization;
 
 namespace Invisionware.Serialization.UnitTests
 {
-    using System.Collections.Generic;
-    using System.IO;
-    using System.Linq;
-    using System.Text;
+	using System.Collections.Generic;
+	using System.IO;
+	using System.Linq;
+	using System.Text;
 
-    public static class SerializerTestExtensions
+	public static class SerializerTestExtensions
     {
         public static bool CanSerializeString<T>(this IStringSerializer serializer, T item, Func<T, T, bool> equalityFunc = null)
         {

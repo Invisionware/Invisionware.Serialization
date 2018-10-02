@@ -17,6 +17,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+
 using Newtonsoft.Json;
 
 namespace Invisionware.Serialization.JsonNET
@@ -35,7 +36,7 @@ namespace Invisionware.Serialization.JsonNET
 		/// <exception cref="ArgumentNullException"></exception>
 		public static IDictionary<string, string> SerializeToDictionary<T>(this T obj, DictionarySerializeOptions options = null) 
 		{
-			if (obj == null)
+			if (EqualityComparer<T>.Default.Equals(obj, default(T)))
 				throw new ArgumentNullException(nameof(obj));
 
 			if (options == null) options = new DictionarySerializeOptions();

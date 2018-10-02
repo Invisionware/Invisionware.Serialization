@@ -64,8 +64,12 @@ namespace TextSerializationTests
 		public bool Equals(Primitives other)
 		{
 			if (other == null) return false;
-			return Int == other.Int && Long == other.Long && Float == other.Float && Double == other.Double
-				&& Boolean == other.Boolean && String == other.String;
+			return Int == other.Int && 
+				Long == other.Long && 
+				Math.Abs(Float - other.Float) < 0.01 && 
+				Math.Abs(Double - other.Double) < 0.01 && 
+				Boolean == other.Boolean && 
+				String == other.String;
 		}
 
 		#endregion

@@ -17,13 +17,11 @@ namespace Invisionware.Serialization
 		/// <param name="stream">Stream to serialize to.</param>
 		public static void SerializeToStream(this IStringSerializer serializer, object obj, Stream stream)
 		{
-			var streamWriter = new StreamWriter(stream)
+			using (var streamWriter = new StreamWriter(stream) { AutoFlush = true })
 			{
-				AutoFlush = true
-			};
-
-			var str = serializer.Serialize(obj);
-			streamWriter.Write(str);
+				var str = serializer.Serialize(obj);
+				streamWriter.Write(str);
+			}
 		}
 
 		/// <summary>

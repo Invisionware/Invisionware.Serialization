@@ -5,15 +5,19 @@
     <AssemblyName>Invisionware.Serialization</AssemblyName>
     <PackageId>Invisionware.Serialization</PackageId>
     <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
-    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
-    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
-    <GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
-    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
-    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Invisionware</Authors>
+    <PackageProjectUrl>https://github.com/Invisionware/Invisionware.Serialization</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/Invisionware/Invisionware.Serialization/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://github.com/Invisionware/Invisionware.Serialization/raw/master/logo.png</PackageIconUrl>
+    <RepositoryUrl>https://www.nuget.org/packages/Invisionware.Serialization/</RepositoryUrl>
+    <PackageTags>dictionary xml json serialization serialize invisionware</PackageTags>
+    <Version>1.1.18</Version>
+    <Copyright>Copyright © 2018 Invisionware</Copyright>
+    <Description>This package implements the core Serialization provider contracts as well as various extension methods for Serialization in general (object to Json, etc.)</Description>
+    <PackageReleaseNotes>Converted to .NET Standard Framework</PackageReleaseNotes>
+    <AssemblyVersion>1.1.18.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
