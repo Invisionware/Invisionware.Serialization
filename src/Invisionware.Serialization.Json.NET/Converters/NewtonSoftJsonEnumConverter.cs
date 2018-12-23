@@ -25,10 +25,9 @@ namespace Invisionware.Serialization.JsonNET.Converters
 			var field = type.GetRuntimeFields().FirstOrDefault(f => f.Name == value.ToString());
 			if (field != null)
 			{
-				var attribute = field.GetCustomAttribute(typeof(JsonEnumAttribute)) as JsonEnumAttribute;
-				writer.WriteValue(attribute != null ? attribute.Name : field.Name);
+                writer.WriteValue(field.GetCustomAttribute(typeof(JsonEnumAttribute)) is JsonEnumAttribute attribute ? attribute.Name : field.Name);
 
-				return;
+                return;
 			}
 
 			throw new ArgumentException("Enum not found");
@@ -70,17 +69,16 @@ namespace Invisionware.Serialization.JsonNET.Converters
 				else if (!objectTypeInfo.IsEnum) throw new InvalidOperationException("Only type Enum is supported");
 
 				foreach (var field in objectType.GetRuntimeFields())
-				{								
-					var attribute = field.GetCustomAttribute(typeof(JsonEnumAttribute)) as JsonEnumAttribute;
-					if (attribute != null)
-					{
-						if (attribute.Name == enumString)
-						{
-							//return field;
-							return Enum.Parse(objectType, field.Name, true);
-						}
-					}
-				}
+				{
+                    if (field.GetCustomAttribute(typeof(JsonEnumAttribute)) is JsonEnumAttribute attribute)
+                    {
+                        if (attribute.Name == enumString)
+                        {
+                            //return field;
+                            return Enum.Parse(objectType, field.Name, true);
+                        }
+                    }
+                }
 			}
 
 			return null;

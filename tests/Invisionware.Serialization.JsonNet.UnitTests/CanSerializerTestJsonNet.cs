@@ -10,7 +10,7 @@ namespace Invisionware.Serialization.UnitTests
 	[TestFixture()]
 	public class CanSerializerTestsJsonNet : CanSerializerTests
 	{
-		private JsonSerializerSettings _jsonSettings;
+		private readonly JsonSerializerSettings _jsonSettings;
 
 		public CanSerializerTestsJsonNet()
 		{

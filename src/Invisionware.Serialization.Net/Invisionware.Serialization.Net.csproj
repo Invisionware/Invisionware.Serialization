@@ -6,7 +6,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Invisionware</Authors>
     <PackageProjectUrl>https://github.com/Invisionware/Invisionware.Serialization</PackageProjectUrl>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/Invisionware/Invisionware.Serialization/master/LICENSE</PackageLicenseUrl>
+    <license>Apache-2.0</license>
     <PackageIconUrl>https://github.com/Invisionware/Invisionware.Serialization/raw/master/logo.png</PackageIconUrl>
     <RepositoryUrl>https://www.nuget.org/packages/Invisionware.Serialization/</RepositoryUrl>
     <PackageTags>dictionary xml json serialization serialize invisionware datacontract</PackageTags>

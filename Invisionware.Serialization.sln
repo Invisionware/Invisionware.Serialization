@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28407.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{030783D5-8B49-446B-B4BD-623CE9C87C7E}"
 EndProject
@@ -37,10 +37,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Invisionware.Serialization.UnitTests.Shared", "tests\Invisionware.Serialization.UnitTests.Shared\Invisionware.Serialization.UnitTests.Shared.shproj", "{2951C80D-FCE7-4CA3-BDCF-B88C3477C66C}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Invisionware.Serialization.Net45.UnitTests.Shared", "tests\Invisionware.Serialization.Net45.UnitTests.Shared\Invisionware.Serialization.Net45.UnitTests.Shared.shproj", "{38CDB4D7-CBD4-4D09-BA65-4C2C2127FC81}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Invisionware.Serialization.JsonNet.UnitTests.Shared", "tests\Invisionware.Serialization.JsonNet.UnitTests.Shared\Invisionware.Serialization.JsonNet.UnitTests.Shared.shproj", "{D95E498D-7414-44E3-889B-EADF5D456A09}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.UnitTests", "tests\Invisionware.Serialization.UnitTests\Invisionware.Serialization.UnitTests.csproj", "{1AAE2B39-DCF8-4260-BC1C-75E70664F669}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.JsonNet.UnitTests", "tests\Invisionware.Serialization.JsonNet.UnitTests\Invisionware.Serialization.JsonNet.UnitTests.csproj", "{32CB02AD-CF32-4B25-A859-AA7FD83FA56E}"
@@ -49,21 +45,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JsonNet", "JsonNet", "{F5FB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASPNET", "ASPNET", "{94DC0301-6A49-465B-A1A4-3679DA964799}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NET45", "NET45", "{4A9F27C4-EE0B-4215-A87D-3178CF0A567C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NETCore", "NETCore", "{4BE9C1C6-EBAC-4ABC-9C93-2F0D5AEFD76F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NET", "NET", "{4BE9C1C6-EBAC-4ABC-9C93-2F0D5AEFD76F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.NetCore.UnitTests", "tests\Invisionware.Serialization.NetCore.UnitTests\Invisionware.Serialization.NetCore.UnitTests.csproj", "{C38891E2-C944-4E16-84F4-613F2E72395A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invisionware.Serialization.Net45.UnitTests", "tests\Invisionware.Serialization.Net45.UnitTests\Invisionware.Serialization.Net45.UnitTests.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		tests\Invisionware.Serialization.UnitTests.Shared\Invisionware.Serialization.UnitTests.Shared.projitems*{2951c80d-fce7-4ca3-bdcf-b88c3477c66c}*SharedItemsImports = 13
-		tests\Invisionware.Serialization.Net45.UnitTests.Shared\Invisionware.Serialization.Net45.UnitTests.Shared.projitems*{38cdb4d7-cbd4-4d09-ba65-4c2c2127fc81}*SharedItemsImports = 13
-		tests\Invisionware.Serialization.Net45.UnitTests.Shared\Invisionware.Serialization.Net45.UnitTests.Shared.projitems*{8edf4429-251a-416d-bb68-93f227191bcf}*SharedItemsImports = 4
-		tests\Invisionware.Serialization.UnitTests.Shared\Invisionware.Serialization.UnitTests.Shared.projitems*{8edf4429-251a-416d-bb68-93f227191bcf}*SharedItemsImports = 4
-		tests\Invisionware.Serialization.JsonNet.UnitTests.Shared\Invisionware.Serialization.JsonNet.UnitTests.Shared.projitems*{d95e498d-7414-44e3-889b-eadf5d456a09}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -188,22 +176,6 @@ Global
 		{C38891E2-C944-4E16-84F4-613F2E72395A}.Release|x64.Build.0 = Release|Any CPU
 		{C38891E2-C944-4E16-84F4-613F2E72395A}.Release|x86.ActiveCfg = Release|Any CPU
 		{C38891E2-C944-4E16-84F4-613F2E72395A}.Release|x86.Build.0 = Release|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|ARM.Build.0 = Debug|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|x64.Build.0 = Debug|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|x86.Build.0 = Debug|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|ARM.ActiveCfg = Release|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|ARM.Build.0 = Release|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|x64.ActiveCfg = Release|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|x64.Build.0 = Release|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|x86.ActiveCfg = Release|Any CPU
-		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -214,16 +186,12 @@ Global
 		{F30C1800-3FBE-4C9E-9296-613F44D00C17} = {030783D5-8B49-446B-B4BD-623CE9C87C7E}
 		{56878017-0F60-4103-B66D-1843C2F28DCD} = {030783D5-8B49-446B-B4BD-623CE9C87C7E}
 		{2951C80D-FCE7-4CA3-BDCF-B88C3477C66C} = {FC9A0D21-3049-40EF-B6F1-55DA2CB685F3}
-		{38CDB4D7-CBD4-4D09-BA65-4C2C2127FC81} = {4A9F27C4-EE0B-4215-A87D-3178CF0A567C}
-		{D95E498D-7414-44E3-889B-EADF5D456A09} = {F5FB93AC-910B-4C5E-AFAC-27F735B361F4}
 		{1AAE2B39-DCF8-4260-BC1C-75E70664F669} = {FC9A0D21-3049-40EF-B6F1-55DA2CB685F3}
 		{32CB02AD-CF32-4B25-A859-AA7FD83FA56E} = {F5FB93AC-910B-4C5E-AFAC-27F735B361F4}
 		{F5FB93AC-910B-4C5E-AFAC-27F735B361F4} = {FC9A0D21-3049-40EF-B6F1-55DA2CB685F3}
 		{94DC0301-6A49-465B-A1A4-3679DA964799} = {FC9A0D21-3049-40EF-B6F1-55DA2CB685F3}
-		{4A9F27C4-EE0B-4215-A87D-3178CF0A567C} = {FC9A0D21-3049-40EF-B6F1-55DA2CB685F3}
 		{4BE9C1C6-EBAC-4ABC-9C93-2F0D5AEFD76F} = {FC9A0D21-3049-40EF-B6F1-55DA2CB685F3}
 		{C38891E2-C944-4E16-84F4-613F2E72395A} = {4BE9C1C6-EBAC-4ABC-9C93-2F0D5AEFD76F}
-		{8EDF4429-251A-416D-BB68-93F227191BCF} = {4A9F27C4-EE0B-4215-A87D-3178CF0A567C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4D8C0137-1AD0-43D0-8D89-88586B0DE139}

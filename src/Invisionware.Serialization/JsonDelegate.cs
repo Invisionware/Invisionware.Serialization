@@ -24,7 +24,7 @@ namespace Invisionware.Serialization
 		/// <summary>
 		/// The function
 		/// </summary>
-		private Func<object, string> func;
+		private readonly Func<object, string> func;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="JsonDelegate"/> class.

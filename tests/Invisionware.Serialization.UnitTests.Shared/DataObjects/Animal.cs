@@ -14,8 +14,7 @@ namespace TextSerializationTests
         #region IEquatable implementation
         public override bool Equals (object obj)
         {
-            var animal = obj as IAnimal;
-            return animal != null && this.Equals (animal);
+            return obj is IAnimal animal && this.Equals(animal);
         }
 
         public override int GetHashCode ()

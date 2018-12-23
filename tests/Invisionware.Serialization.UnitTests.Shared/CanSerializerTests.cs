@@ -8,8 +8,8 @@ namespace Invisionware.Serialization.UnitTests
 	[TestFixture()]
 	public abstract class CanSerializerTests
 	{
-		Func<DateTime, DateTime, bool> _funcDateTimeEquality = (item1, item2) => DateTime.Equals(item1.Date, item2.Date);
-		Func<DateTimeOffset, DateTimeOffset, bool> _funcDateTimeOffSetEquality = (item1, item2) => DateTimeOffset.Equals(item1.Date, item2.Date);
+        readonly Func<DateTime, DateTime, bool> _funcDateTimeEquality = (item1, item2) => DateTime.Equals(item1.Date, item2.Date);
+        readonly Func<DateTimeOffset, DateTimeOffset, bool> _funcDateTimeOffSetEquality = (item1, item2) => DateTimeOffset.Equals(item1.Date, item2.Date);
 
 		protected abstract ISerializer Serializer { get; }
 

@@ -30,8 +30,7 @@ namespace TextSerializationTests
         #region IEquatable implementation
         public override bool Equals (object obj)
         {
-            var person = obj as Person;
-            return (person != null && this.Equals(person));
+            return (obj is Person person && this.Equals(person));
         }
 
         public override int GetHashCode ()

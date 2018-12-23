@@ -11,19 +11,19 @@ namespace Invisionware.Serialization.UnitTests
 	[TestFixture]
 	public class DictionarySerializationTests
 	{
-		private DictionarySerializeOptions _serializationOptionsAttributeFilter1 =
+		private readonly DictionarySerializeOptions _serializationOptionsAttributeFilter1 =
 			new DictionarySerializeOptions
 			{
 					IgnorePropertiesWithoutAttribute = true
 				};
 
-		private DictionarySerializeOptions _serializationOptionsAttributeFilter2 =
+		private readonly DictionarySerializeOptions _serializationOptionsAttributeFilter2 =
 			new DictionarySerializeOptions
 			{
 				PropertyFilter = (p) => p.Name != "ParamList1" && p.GetCustomAttribute<DictionaryElementAttribute>()?.Name != "ParamList1"
 			};
 
-		private DictionarySerializeOptions _serializationOptionsUrlDisableEncode1 =
+		private readonly DictionarySerializeOptions _serializationOptionsUrlDisableEncode1 =
 			new DictionarySerializeOptions
 			{
 				UrlEncodeKeyName = false,

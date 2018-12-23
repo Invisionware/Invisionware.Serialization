@@ -73,6 +73,25 @@ public enum SampleTypes {
 
 ##### Usage
 ```
+A	// Set everything up
+	// Get an instance to the dependency container (only needed it we want to setup a custom JsonSerializerSettings)
+	container = Resolver.Resolve<IDependencyContainer>();
+
+	// Setup the JsonSerializerSettings like we did above 
+	jsonSettings = new ....
+	var jsonSerializer = new JsonSeializer(jsonSettings);
+
+	// Register it with the IoC framework
+	container.Register<IJsonSerializer>(t => jsonSerializer);
+
+	// Now if we need to get the serializer we can use the main resolver
+	serializer = Resolver.Resolve(IJsonSerializer);
+
+	// Lets serialize an object
+	var str = serializer.Serialize(myCustomObject);
+
+	// Lets deserialize it back into an object
+	var obj = serializer.Deserialize<MyCustomObjectClass>(str);
 ```
 
 ### ASPNet
@@ -82,12 +101,47 @@ This library adds support for serializing Media Types
 
 #### SystemJsonSerializer
 
+Uses the .NET 4.5 Desktop System.Runtime.Serialization.Json.DataContractJsonSerializer
+
 ##### Usage
 ```
-```
+	// Set everything up
+	// Get an instance to the dependency container 
+	container = Resolver.Resolve<IDependencyContainer>();
+
+	var jsonSerializer = new SystemJsonSerializer();
+	// Register it with the IoC framework
+	container.Register<IJsonSerializer>(t => jsonSerializer);
+
+	// Now if we need to get the serializer we can use the main resolver
+	serializer = Resolver.Resolve(IJsonSerializer);
+
+	// Lets serialize an object
+	var str = serializer.Serialize(myCustomObject);
+
+	// Lets deserialize it back into an object
+	var obj = serializer.Deserialize<MyCustomObjectClass>(str);
+````
 
 #### SystemXmlSerializer
+Uses the .NET 4.5 Desktop System.Runtime.Serialization.DataContractSerializer
 
 ##### Usage
 ```
+	// Set everything up
+	// Get an instance to the dependency container 
+	container = Resolver.Resolve<IDependencyContainer>();
+
+	var xmlSerializer = new SystemXmlSerializer();
+	// Register it with the IoC framework
+	container.Register<IXmlSerializer>(t => xmlSerializer);
+
+	// Now if we need to get the serializer we can use the main resolver
+	serializer = Resolver.Resolve(IXmlSerializer);
+
+	// Lets serialize an object
+	var str = serializer.Serialize(myCustomObject);
+
+	// Lets deserialize it back into an object
+	var obj = serializer.Deserialize<MyCustomObjectClass>(str);
 ```

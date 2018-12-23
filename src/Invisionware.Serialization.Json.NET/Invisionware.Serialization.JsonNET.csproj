@@ -4,7 +4,7 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Authors>Invisionware</Authors>
 		<PackageProjectUrl>https://github.com/Invisionware/Invisionware.Serialization</PackageProjectUrl>
-		<PackageLicenseUrl>https://raw.githubusercontent.com/Invisionware/Invisionware.Serialization/master/LICENSE</PackageLicenseUrl>
+		<license>Apache-2.0</license>
 		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Serialization/raw/master/logo.png</PackageIconUrl>
 		<RepositoryUrl>https://www.nuget.org/packages/Invisionware.Serialization/</RepositoryUrl>
 		<PackageTags>dictionary xml json serialization serialize invisionware</PackageTags>
@@ -16,7 +16,7 @@
 		<PackageId>Invisionware.Serialization.JSON</PackageId>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Invisionware.Serialization\Invisionware.Serialization.csproj" />
