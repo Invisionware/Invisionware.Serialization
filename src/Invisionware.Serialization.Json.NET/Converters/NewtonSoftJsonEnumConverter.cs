@@ -1,9 +1,23 @@
-﻿using System;
+﻿// ***********************************************************************
+// Assembly         : Invisionware.Serialization.JsonNet
+// Author           : Shawn Anderson
+// Created          : 01-31-2018
+//
+// Last Modified By : Shawn Anderson
+// Last Modified On : 01-31-2018
+// ***********************************************************************
+// <copyright file="NewtonSoftJsonEnumConverter.cs" company="Invisionware">
+//     Copyright (c) 2019
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
+using System;
 using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
 
-namespace Invisionware.Serialization.JsonNET.Converters
+namespace Invisionware.Serialization.JsonNet.Converters
 {
 	class NewtonSoftJsonEnumConverter : Newtonsoft.Json.Converters.StringEnumConverter
 	{
@@ -25,9 +39,9 @@ namespace Invisionware.Serialization.JsonNET.Converters
 			var field = type.GetRuntimeFields().FirstOrDefault(f => f.Name == value.ToString());
 			if (field != null)
 			{
-                writer.WriteValue(field.GetCustomAttribute(typeof(JsonEnumAttribute)) is JsonEnumAttribute attribute ? attribute.Name : field.Name);
+				writer.WriteValue(field.GetCustomAttribute(typeof(JsonEnumAttribute)) is JsonEnumAttribute attribute ? attribute.Name : field.Name);
 
-                return;
+				return;
 			}
 
 			throw new ArgumentException("Enum not found");
@@ -70,15 +84,15 @@ namespace Invisionware.Serialization.JsonNET.Converters
 
 				foreach (var field in objectType.GetRuntimeFields())
 				{
-                    if (field.GetCustomAttribute(typeof(JsonEnumAttribute)) is JsonEnumAttribute attribute)
-                    {
-                        if (attribute.Name == enumString)
-                        {
-                            //return field;
-                            return Enum.Parse(objectType, field.Name, true);
-                        }
-                    }
-                }
+					if (field.GetCustomAttribute(typeof(JsonEnumAttribute)) is JsonEnumAttribute attribute)
+					{
+						if (attribute.Name == enumString)
+						{
+							//return field;
+							return Enum.Parse(objectType, field.Name, true);
+						}
+					}
+				}
 			}
 
 			return null;

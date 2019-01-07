@@ -1,23 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
 	<PropertyGroup>
-		<TargetFramework>netstandard1.1</TargetFramework>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<TargetFrameworks>netcoreapp1.1;netstandard1.1;net472</TargetFrameworks>
+		<PackageId>Invisionware.Serialization.JSON</PackageId>
 		<Authors>Invisionware</Authors>
 		<PackageProjectUrl>https://github.com/Invisionware/Invisionware.Serialization</PackageProjectUrl>
 		<license>Apache-2.0</license>
 		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Serialization/raw/master/logo.png</PackageIconUrl>
-		<RepositoryUrl>https://www.nuget.org/packages/Invisionware.Serialization/</RepositoryUrl>
-		<PackageTags>dictionary xml json serialization serialize invisionware</PackageTags>
-		<Version>1.1.18</Version>
-		<Copyright>Copyright © 2018 Invisionware</Copyright>
 		<Description>This package implements the Serialization provider contracts for serializers for Json.NET</Description>
-		<PackageReleaseNotes>Converted to .NET Standard Framework</PackageReleaseNotes>
-		<AssemblyVersion>1.1.18.0</AssemblyVersion>
-		<PackageId>Invisionware.Serialization.JSON</PackageId>
+		<PackageReleaseNotes />
+		<Copyright>Copyright © 2019 Invisionware</Copyright>
+		<PackageTags>dictionary xml json serialization serialize invisionware</PackageTags>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<AssemblyName>Invisionware.Serialization.JsonNet</AssemblyName>
+		<RootNamespace>Invisionware.Serialization.JsonNet</RootNamespace>
 	</PropertyGroup>
+	
 	<ItemGroup>
 		<PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 	</ItemGroup>
+	
 	<ItemGroup>
 		<ProjectReference Include="..\Invisionware.Serialization\Invisionware.Serialization.csproj" />
 	</ItemGroup>

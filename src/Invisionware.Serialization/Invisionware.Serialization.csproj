@@ -1,27 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard1.0</TargetFramework>
-    <AssemblyName>Invisionware.Serialization</AssemblyName>
-    <PackageId>Invisionware.Serialization</PackageId>
-    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+	<PropertyGroup>
+		<TargetFrameworks>netcoreapp1.0;netstandard1.0;net472</TargetFrameworks>	
+		<PackageId>Invisionware.Serialization</PackageId>
+		<Authors>Invisionware</Authors>
+		<PackageProjectUrl>https://github.com/Invisionware/Invisionware.Serialization</PackageProjectUrl>
+		<license>Apache-2.0</license>
+		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Serialization/raw/master/logo.png</PackageIconUrl>
+		<Description>This package implements the core Serialization provider contracts as well as various extension methods for Serialization in general (object to Json, etc.)</Description>
+		<PackageReleaseNotes />
+		<Copyright>Copyright © 2018 Invisionware</Copyright>
+		<PackageTags>dictionary xml json serialization serialize invisionware</PackageTags>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+	</PropertyGroup>
 
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Invisionware</Authors>
-    <PackageProjectUrl>https://github.com/Invisionware/Invisionware.Serialization</PackageProjectUrl>
-    <license>Apache-2.0</license>
-    <PackageIconUrl>https://github.com/Invisionware/Invisionware.Serialization/raw/master/logo.png</PackageIconUrl>
-    <RepositoryUrl>https://www.nuget.org/packages/Invisionware.Serialization/</RepositoryUrl>
-    <PackageTags>dictionary xml json serialization serialize invisionware</PackageTags>
-    <Version>1.1.18</Version>
-    <Copyright>Copyright © 2018 Invisionware</Copyright>
-    <Description>This package implements the core Serialization provider contracts as well as various extension methods for Serialization in general (object to Json, etc.)</Description>
-    <PackageReleaseNotes>Converted to .NET Standard Framework</PackageReleaseNotes>
-    <AssemblyVersion>1.1.18.0</AssemblyVersion>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="Invisionware.Serialization.csproj.DotSettings" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="Invisionware.Serialization.csproj.DotSettings" />
+	</ItemGroup>
 
 </Project>

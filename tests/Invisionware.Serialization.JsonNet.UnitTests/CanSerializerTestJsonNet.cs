@@ -1,5 +1,5 @@
 using Invisionware.Serialization;
-using Invisionware.Serialization.JsonNET;
+using Invisionware.Serialization.JsonNet;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using NUnit.Framework;
@@ -37,7 +37,7 @@ namespace Invisionware.Serialization.UnitTests
 
 		protected override ISerializer Serializer
 		{
-			get { return new global::Invisionware.Serialization.JsonNET.JsonSerializer(_jsonSettings); }
+			get { return new global::Invisionware.Serialization.JsonNet.JsonSerializer(_jsonSettings); }
 		}
 	}
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Xml.Serialization;
 using FluentAssertions;
-using Invisionware.Serialization.JsonNET;
+using Invisionware.Serialization.JsonNet;
 
 namespace Invisionware.Serialization.UnitTests
 {

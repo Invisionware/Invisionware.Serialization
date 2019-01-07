@@ -1,13 +1,13 @@
 ﻿// ***********************************************************************
-// Assembly         : Invisionware.Serialization.Json.NET
+// Assembly         : Invisionware.Serialization.JsonNet
 // Author           : Shawn Anderson
 // Created          : 01-31-2018
 //
 // Last Modified By : Shawn Anderson
 // Last Modified On : 01-31-2018
 // ***********************************************************************
-// <copyright file="ObjectToDictionarySerializer.cs" company="Invisionware.Serialization.Json.NET">
-//     Copyright (c) Blockchain LLama. All rights reserved.
+// <copyright file="ObjectToDictionarySerializer.cs" company="Invisionware">
+//     Copyright (c) 2019
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
@@ -20,7 +20,7 @@ using System.Reflection;
 
 using Newtonsoft.Json;
 
-namespace Invisionware.Serialization.JsonNET
+namespace Invisionware.Serialization.JsonNet
 {
 	public static class ObjectToDictionarySerializer
 	{

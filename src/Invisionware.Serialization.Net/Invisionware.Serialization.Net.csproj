@@ -1,31 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard1.1</TargetFramework>
-	
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Invisionware</Authors>
-    <PackageProjectUrl>https://github.com/Invisionware/Invisionware.Serialization</PackageProjectUrl>
-    <license>Apache-2.0</license>
-    <PackageIconUrl>https://github.com/Invisionware/Invisionware.Serialization/raw/master/logo.png</PackageIconUrl>
-    <RepositoryUrl>https://www.nuget.org/packages/Invisionware.Serialization/</RepositoryUrl>
-    <PackageTags>dictionary xml json serialization serialize invisionware datacontract</PackageTags>
-    <Version>1.1.18</Version>
-    <Copyright>Copyright © 2018 Invisionware</Copyright>
-    <Description>This package implements the Serialization provider contracts for serializers supported in full ASP.NET 4.5 framework</Description>
-    <PackageReleaseNotes>Converted to .NET Standard Framework</PackageReleaseNotes>
-    <AssemblyVersion>1.1.18.0</AssemblyVersion>
-    <PackageId>Invisionware.Serialization.Net45</PackageId>
-    <Product>Invisionware.Serialization.Net45</Product>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>netcoreapp1.1;netstandard1.1;net472</TargetFrameworks>
+		<PackageId>Invisionware.Serialization.Net45</PackageId>
+		<Authors>Invisionware</Authors>
+		<PackageProjectUrl>https://github.com/Invisionware/Invisionware.Serialization</PackageProjectUrl>
+		<license>Apache-2.0</license>
+		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Serialization/raw/master/logo.png</PackageIconUrl>
+		<Description>This package implements the Serialization provider contracts for serializers supported in full ASP.NET 4.5 framework</Description>
+		<PackageReleaseNotes />
+		<Copyright>Copyright © 2018 Invisionware</Copyright>
+		<PackageTags>dictionary xml json serialization serialize invisionware datacontract</PackageTags>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />
-    <PackageReference Include="System.Runtime.Serialization.Xml" Version="4.3.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />
+		<PackageReference Include="System.Runtime.Serialization.Xml" Version="4.3.0" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Invisionware.Serialization\Invisionware.Serialization.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Invisionware.Serialization\Invisionware.Serialization.csproj" />
+	</ItemGroup>
 
 </Project>

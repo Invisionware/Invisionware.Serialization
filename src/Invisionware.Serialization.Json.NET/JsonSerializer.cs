@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Invisionware.Serialization.JsonNET
+namespace Invisionware.Serialization.JsonNet
 {
 	/// <summary>
 	/// JSON serializer using Newtonsoft.Json library.

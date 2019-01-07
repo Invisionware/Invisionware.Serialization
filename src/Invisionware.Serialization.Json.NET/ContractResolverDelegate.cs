@@ -1,7 +1,21 @@
-﻿using System;
+﻿// ***********************************************************************
+// Assembly         : Invisionware.Serialization.JsonNet
+// Author           : Shawn Anderson
+// Created          : 01-31-2018
+//
+// Last Modified By : Shawn Anderson
+// Last Modified On : 01-31-2018
+// ***********************************************************************
+// <copyright file="ContractResolverDelegate.cs" company="Invisionware">
+//     Copyright (c) 2019
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
+using System;
 using Newtonsoft.Json.Serialization;
 
-namespace Invisionware.Serialization.JsonNET
+namespace Invisionware.Serialization.JsonNet
 {
 	/// <summary>
 	/// Contract resolver delegate.

@@ -4,14 +4,6 @@ VisualStudioVersion = 16.0.28407.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{030783D5-8B49-446B-B4BD-623CE9C87C7E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{A31F0DBA-7B31-40C8-9887-2E51BD76D565}"
-	ProjectSection(SolutionItems) = preProject
-		nuspec\Invisionware.Serialization.ASPNet.nuspec = nuspec\Invisionware.Serialization.ASPNet.nuspec
-		nuspec\Invisionware.Serialization.JsonNet.nuspec = nuspec\Invisionware.Serialization.JsonNet.nuspec
-		nuspec\Invisionware.Serialization.Net45.nuspec = nuspec\Invisionware.Serialization.Net45.nuspec
-		nuspec\Invisionware.Serialization.nuspec = nuspec\Invisionware.Serialization.nuspec
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".misc", ".misc", "{B67DBE97-2A64-4E27-8878-698FC381DABD}"
 	ProjectSection(SolutionItems) = preProject
 		build.cake = build.cake
