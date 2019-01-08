@@ -113,6 +113,18 @@ namespace Invisionware.Serialization.UnitTests
 		}
 
 		[Test]
+		public void ObjectDeserializeWithStringConverterTest1()
+		{
+			var str = "{\"SomeArray\":\"value1\"}";
+
+			var result = Newtonsoft.Json.JsonConvert.DeserializeObject<ObjectWithStringListConverterTestClass1>(str);
+
+			result.Should().NotBeNull();
+			result.SomeArray.Should().NotBeEmpty();
+			result.SomeArray.Should().Contain("value1");
+		}
+
+		[Test]
 		public void ObjectDeserializeWithIntListConverterTest1()
 		{
 			var str = "{\"SomeArray\":\"1,2, 3\"}";
@@ -125,9 +137,34 @@ namespace Invisionware.Serialization.UnitTests
 		}
 
 		[Test]
+		public void ObjectDeserializeWithIntConverterTest1()
+		{
+			var str = "{\"SomeArray\":\"1\"}";
+
+			var result = Newtonsoft.Json.JsonConvert.DeserializeObject<ObjectWithIntListConverterTestClass1>(str);
+
+			result.Should().NotBeNull();
+			result.SomeArray.Should().NotBeEmpty();
+			result.SomeArray.Should().Contain(1);
+		}
+
+		[Test]
 		public void ObjectDeserializeWithDateListConverterTest1()
 		{
 			var str = "{\"SomeArray\":\"1/8/2019 9:19:32 AM,1/9/2019 9:19:32 AM\"}";
+
+
+			var result = Newtonsoft.Json.JsonConvert.DeserializeObject<ObjectWithDateListConverterTestClass1>(str);
+
+			result.Should().NotBeNull();
+			result.SomeArray.Should().NotBeEmpty();
+			result.SomeArray.Should().Contain(DateTime.Parse("1/8/2019 9:19:32 AM"));
+		}
+
+		[Test]
+		public void ObjectDeserializeWithDateConverterTest1()
+		{
+			var str = "{\"SomeArray\":\"1/8/2019 9:19:32 AM\"}";
 
 
 			var result = Newtonsoft.Json.JsonConvert.DeserializeObject<ObjectWithDateListConverterTestClass1>(str);

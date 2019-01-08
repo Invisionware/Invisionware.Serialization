@@ -12,7 +12,8 @@ namespace Invisionware.Serialization
 			//if (!type.GetGenericArguments().Any())
 			//	return false;
 
-			if (type.IsArray) return true;
+			if (type.IsArray || type.GetTypeInfo().IsArray) return true;
+			if (!type.GetTypeInfo().IsGenericType) return false;
 
 			Type genericTypeDefinition = type.GetGenericTypeDefinition();
 			var collectionTypes = new[] { typeof(IEnumerable<>), typeof(ICollection<>), typeof(IList<>), typeof(List<>) };

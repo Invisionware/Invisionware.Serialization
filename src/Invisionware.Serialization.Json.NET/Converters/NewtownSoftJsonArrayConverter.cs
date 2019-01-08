@@ -89,6 +89,8 @@ namespace Invisionware.Serialization.JsonNet.Converters
 			var arrayString = (string)reader.Value;
 				
 			var array = arrayString.Split(new[] { _seperator }, StringSplitOptions.None);
+			// Handle the scenerio where there is only one element
+			if (array == null) array = new[] { arrayString };
 
 			var jArray = Newtonsoft.Json.Linq.JArray.FromObject(array, serializer);
 			var result = jArray.ToObject(objectType);
