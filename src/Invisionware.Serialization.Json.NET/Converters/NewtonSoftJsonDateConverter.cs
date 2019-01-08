@@ -23,6 +23,10 @@ namespace Invisionware.Serialization.JsonNet.Converters
 	{
 		private readonly IFormatProvider _formatProvider;
 
+		public NewtonSoftJsonDateTimeCustomFormatConverter(string format) : this(format, DateTimeStyles.None, null)
+		{
+		}
+
 		public NewtonSoftJsonDateTimeCustomFormatConverter(string format, System.Globalization.DateTimeStyles dateStyles = System.Globalization.DateTimeStyles.None, IFormatProvider formatProvider = null)
 		{
 			DateTimeFormat = format;
@@ -50,8 +54,8 @@ namespace Invisionware.Serialization.JsonNet.Converters
 			if (value is DateTime dt)
 			{
 				var str = dt.ToString(DateTimeFormat, _formatProvider);
-
-				base.WriteJson(writer, str, serializer);
+				
+				writer.WriteValue(str);
 			}
 			else
 			{

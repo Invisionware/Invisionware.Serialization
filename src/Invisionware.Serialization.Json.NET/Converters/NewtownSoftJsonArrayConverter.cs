@@ -6,45 +6,64 @@
 // Last Modified By : Shawn Anderson
 // Last Modified On : 01-31-2018
 // ***********************************************************************
-// <copyright file="NewtonSoftJsonEnumConverter.cs" company="Invisionware">
+// <copyright file="NewtonSoftJsonArrayConverter.cs" company="Invisionware">
 //     Copyright (c) 2019
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
 
 namespace Invisionware.Serialization.JsonNet.Converters
 {
-	public class NewtonSoftJsonEnumConverter : Newtonsoft.Json.Converters.StringEnumConverter
+	public class NewtonSoftJsonArrayConverter : Newtonsoft.Json.JsonConverter
 	{
+		private readonly string _seperator = ",";
+		//private readonly string _format;
+
+		public NewtonSoftJsonArrayConverter(string seperator/*, string format*/)
+		{
+			_seperator = seperator;
+			//_format = format;
+		}
+
 		/// <summary>
 		/// Writes the JSON representation of the object.
 		/// </summary>
 		/// <param name="writer">The <see cref="T:Newtonsoft.Json.JsonWriter" /> to write to.</param>
 		/// <param name="value">The value.</param>
 		/// <param name="serializer">The calling serializer.</param>
-		/// <exception cref="System.InvalidOperationException">Only type Enum is supported</exception>
+		/// <exception cref="System.NotSupportedException">Only array types are supported</exception>
 		/// <exception cref="System.ArgumentException">Enum not found</exception>
 		/// TODO Edit XML Comment Template for WriteJson
 		public override void WriteJson(JsonWriter writer, object value, Newtonsoft.Json.JsonSerializer serializer)
 		{
 			var type = value.GetType();
 
-			if (!type.GetTypeInfo().IsEnum) throw new InvalidOperationException("Only type Enum is supported");
+			if (!type.IsCollectionType()) throw new NotSupportedException("Only array types are supported");
 
-			var field = type.GetRuntimeFields().FirstOrDefault(f => f.Name == value.ToString());
-			if (field != null)
+			string str;
+			if (!(value is object[] array))
 			{
-				writer.WriteValue(field.GetCustomAttribute(typeof(JsonEnumAttribute)) is JsonEnumAttribute attribute ? attribute.Name : field.Name);
-
-				return;
+				array = ((IEnumerable)value).Cast<object>().ToArray();
 			}
 
-			throw new ArgumentException("Enum not found");
+			//if (!string.IsNullOrEmpty(_format))
+			//{
+			//	for (int i=0; i<array.Length;i++)
+			//	{
+			//		array[i] = string.Format(_format, array[i]);
+			//	}
+			//}
+
+			str = string.Join(_seperator, array);
+
+			writer.WriteValue(str);
 		}
 
 		#region Overrides of StringEnumConverter
@@ -65,37 +84,21 @@ namespace Invisionware.Serialization.JsonNet.Converters
 		/// TODO Edit XML Comment Template for ReadJson
 		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, Newtonsoft.Json.JsonSerializer serializer)
 		{
-			var enumString = (string)reader.Value;
+			if (!objectType.IsCollectionType()) throw new NotSupportedException("Only array types are supported");
 
-			try
-			{
-				return Enum.Parse(objectType, enumString, true);
-			}
-			catch
-			{
-				var objectTypeInfo = objectType.GetTypeInfo();
+			var arrayString = (string)reader.Value;
+				
+			var array = arrayString.Split(new[] { _seperator }, StringSplitOptions.None);
 
-				if (objectTypeInfo.IsGenericType && objectType.GetGenericTypeDefinition() == typeof(Nullable<>))
-				{
-					if (!Nullable.GetUnderlyingType(objectType).GetTypeInfo().IsEnum)
-						throw new InvalidOperationException("Only type Enum is supported");
-				}
-				else if (!objectTypeInfo.IsEnum) throw new InvalidOperationException("Only type Enum is supported");
+			var jArray = Newtonsoft.Json.Linq.JArray.FromObject(array, serializer);
+			var result = jArray.ToObject(objectType);
 
-				foreach (var field in objectType.GetRuntimeFields())
-				{
-					if (field.GetCustomAttribute(typeof(JsonEnumAttribute)) is JsonEnumAttribute attribute)
-					{
-						if (attribute.Name == enumString)
-						{
-							//return field;
-							return Enum.Parse(objectType, field.Name, true);
-						}
-					}
-				}
-			}
+			return result;
+		}
 
-			return null;
+		public override bool CanConvert(Type objectType)
+		{
+			return objectType.IsCollectionType();
 		}
 
 		#endregion

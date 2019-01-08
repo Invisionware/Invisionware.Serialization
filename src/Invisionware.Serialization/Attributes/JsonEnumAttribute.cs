@@ -2,7 +2,7 @@
 
 namespace Invisionware.Serialization
 {
-	[AttributeUsage(AttributeTargets.Enum)]
+	[AttributeUsage(AttributeTargets.Enum | AttributeTargets.Field)]
 	public class JsonEnumAttribute : Attribute
 	{
 		public string Name { get; set; }

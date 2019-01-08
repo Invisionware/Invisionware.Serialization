@@ -4,20 +4,22 @@ using System.Text;
 using Newtonsoft.Json;
 using Invisionware.Serialization.JsonNet.Converters;
 using NUnit.Framework;
+using FluentAssertions;
 
 namespace Invisionware.Serialization.UnitTests
 {
 	[TestFixture]
 	public class CustomFormatDateTimeConverterTests
 	{
+		[Test]
 		public void DateTimeCustomFormatConverterTest()
-		{			
-		}
-	}
+		{
+			var obj = new DateTimeFormatConverterTestClass1();
 
-	public class CustomFormatDateTimeConverterTestClass
-	{
-		[JsonConverter(typeof(NewtonSoftJsonDateTimeCustomFormatConverter), "dd-MM-yyyy")]
-		public DateTime DayMonthYear { get; set; } = DateTime.Now;
+			var result = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
+
+			result.Should().NotBeNullOrEmpty();
+			result.Should().Contain(obj.SomeDate.ToString("dd-MM-yyyy"));
+		}
 	}
 }

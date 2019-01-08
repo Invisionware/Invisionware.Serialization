@@ -40,7 +40,7 @@ namespace Invisionware.Serialization.UnitTests
 		[Test]
 		public void TestSimpleClassDefaultOptions()
 		{
-			var obj = new DictionaryObjectTestClass1();
+			var obj = new ObjectWithDictionaryAttributeTestClass1();
 			var result = obj.SerializeToDictionary();
 			
 			result.Should().NotBeNull("Dictionary creation failed");
@@ -53,7 +53,7 @@ namespace Invisionware.Serialization.UnitTests
 		[Test]
 		public void TestSimpleClassOnlyMarkedAttributes()
 		{
-			var obj = new DictionaryObjectTestClass1();
+			var obj = new ObjectWithDictionaryAttributeTestClass1();
 			var result = obj.SerializeToDictionary(_serializationOptionsAttributeFilter1);
 
 			result.Should().NotBeNull("Dictionary creation failed");
@@ -66,7 +66,7 @@ namespace Invisionware.Serialization.UnitTests
 		[Test]
 		public void TestSimpleClassIgnoreBasedOnAttributes()
 		{
-			var obj = new DictionaryObjectTestClass1();
+			var obj = new ObjectWithDictionaryAttributeTestClass1();
 			var result = obj.SerializeToDictionary(_serializationOptionsAttributeFilter2);
 
 			result.Should().NotBeNull("Dictionary creation failed");
@@ -78,7 +78,7 @@ namespace Invisionware.Serialization.UnitTests
 		[Test]
 		public void TestClassDoNotEncodListValues()
 		{
-			var obj = new DictionaryObjectTestClass1();
+			var obj = new ObjectWithDictionaryAttributeTestClass1();
 			var result = obj.SerializeToDictionary(_serializationOptionsUrlDisableEncode1);
 
 			result.Should().NotBeNull("Dictionary creation failed");
@@ -90,7 +90,7 @@ namespace Invisionware.Serialization.UnitTests
 		[Test]
 		public void TestJsonPropertyName()
 		{
-			var obj = new DictionaryObjectTestClass2();
+			var obj = new ObjectWithJsonDictionaryXmlAttributeTestClass1();
 			var result = obj.SerializeToDictionary();
 
 			result.Should().NotBeNull("Dictionary creation failed");
@@ -115,7 +115,7 @@ namespace Invisionware.Serialization.UnitTests
 		[Test]
 		public void TestMultipleAttributePropertyName()
 		{
-			var obj = new DictionaryObjectTestClass3();
+			var obj = new ObjectWithDictionaryJsonAttributeTestClass1();
 			var result = obj.SerializeToDictionary();
 
 			result.Should().NotBeNull("Dictionary creation failed");
@@ -130,55 +130,12 @@ namespace Invisionware.Serialization.UnitTests
 		[Test]
 		public void TestInterface()
 		{
-			var obj = new DictionaryObjectTestClass3();
+			var obj = new ObjectWithDictionaryJsonAttributeTestClass1();
 			var result = obj.SerializeToDictionary(_serializationOptionsUrlDisableEncode1);
 
 			result.Should().NotBeNull("Dictionary creation failed");
 			result.Should().Contain("someParam1", "ClassInterfaceValue1");
 			result.Should().Contain("someParam2","3");
 		}
-	}
-
-	public class DictionaryObjectTestClass1
-	{
-		[DictionaryElement()]
-		public string Param1 { get; set; } = "Class1 Value";
-		[DictionaryElement()]
-		public int Param2 { get; set; } = 1;
-		public List<string> ParamList1 { get; set; } = new List<string> {"listItem1", "listItem2", "listItem3"};
-	}
-
-	public class DictionaryObjectTestClass2
-	{
-		[JsonProperty("someParam1Json")]
-		public string Param1 { get; set; } = "Class2Value";
-
-		[DictionaryElement("someParam2")]
-		public int Param2 { get; set; } = 2;
-
-		[XmlElement("someParamList1Xml")]
-		public List<string> ParamList1 { get; set; } = new List<string> { "listItem1", "listItem2", "listItem3" };
-	}
-
-	public interface IDictionaryObjectTestInterface1
-	{
-		[DictionaryElement("someParam1")]
-		string Param1 { get; set; }
-		[DictionaryElement("someParam2")]
-		int Param2 { get; set; }
-	}
-
-	public class DictionaryObjectTestClass3 : IDictionaryObjectTestInterface1
-	{
-		#region Implementation of IQueryStringInterface1
-
-		public string Param1 { get; set; } = "ClassInterfaceValue1";
-		public int Param2 { get; set; } = 3;
-
-		[DictionaryElement("someParam3")]
-		[JsonProperty("someParam3Json")]
-		public string Param3 { get; set; } = "Class3Param3 Value";
-
-		#endregion
 	}
 }
