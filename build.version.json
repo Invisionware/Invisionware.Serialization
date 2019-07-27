@@ -1,1 +1,1 @@
-{"major":1,"minor":1,"build":19,"preRelease":4,"releaseNotes":["Added support for .NET core","Added a new ArrayConverter","Fixed a bug in the DateConverter"]}
+{"major":1,"minor":1,"build":19,"preRelease":0,"releaseNotes":[]}
