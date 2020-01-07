@@ -27,11 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.Net", "src\Invisionware.Serialization.Net\Invisionware.Serialization.Net.csproj", "{56878017-0F60-4103-B66D-1843C2F28DCD}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Invisionware.Serialization.UnitTests.Shared", "tests\Invisionware.Serialization.UnitTests.Shared\Invisionware.Serialization.UnitTests.Shared.shproj", "{2951C80D-FCE7-4CA3-BDCF-B88C3477C66C}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Invisionware.Serialization.Tests.Shared", "tests\Invisionware.Serialization.Tests.Shared\Invisionware.Serialization.Tests.Shared.shproj", "{2951C80D-FCE7-4CA3-BDCF-B88C3477C66C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.UnitTests", "tests\Invisionware.Serialization.UnitTests\Invisionware.Serialization.UnitTests.csproj", "{1AAE2B39-DCF8-4260-BC1C-75E70664F669}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.Tests", "tests\Invisionware.Serialization.Tests\Invisionware.Serialization.Tests.csproj", "{1AAE2B39-DCF8-4260-BC1C-75E70664F669}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.JsonNet.UnitTests", "tests\Invisionware.Serialization.JsonNet.UnitTests\Invisionware.Serialization.JsonNet.UnitTests.csproj", "{32CB02AD-CF32-4B25-A859-AA7FD83FA56E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.JsonNet.Tests", "tests\Invisionware.Serialization.JsonNet.Tests\Invisionware.Serialization.JsonNet.Tests.csproj", "{32CB02AD-CF32-4B25-A859-AA7FD83FA56E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JsonNet", "JsonNet", "{F5FB93AC-910B-4C5E-AFAC-27F735B361F4}"
 EndProject
@@ -39,11 +39,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASPNET", "ASPNET", "{94DC03
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NET", "NET", "{4BE9C1C6-EBAC-4ABC-9C93-2F0D5AEFD76F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.NetCore.UnitTests", "tests\Invisionware.Serialization.NetCore.UnitTests\Invisionware.Serialization.NetCore.UnitTests.csproj", "{C38891E2-C944-4E16-84F4-613F2E72395A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.NetCore.Tests", "tests\Invisionware.Serialization.NetCore.Tests\Invisionware.Serialization.NetCore.Tests.csproj", "{C38891E2-C944-4E16-84F4-613F2E72395A}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		tests\Invisionware.Serialization.UnitTests.Shared\Invisionware.Serialization.UnitTests.Shared.projitems*{2951c80d-fce7-4ca3-bdcf-b88c3477c66c}*SharedItemsImports = 13
+		tests\Invisionware.Serialization.Tests.Shared\Invisionware.Serialization.Tests.Shared.projitems*{2951c80d-fce7-4ca3-bdcf-b88c3477c66c}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
