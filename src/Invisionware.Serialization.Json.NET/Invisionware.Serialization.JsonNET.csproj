@@ -5,16 +5,22 @@
 		<PackageId>Invisionware.Serialization.JSON</PackageId>
 		<Authors>Invisionware</Authors>
 		<PackageProjectUrl>https://github.com/Invisionware/Invisionware.Serialization</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Invisionware/Invisionware.Serialization</RepositoryUrl>
+		<RepositoryType>github</RepositoryType>
+		<PackageIcon>logo.png</PackageIcon>
 		<license>Apache-2.0</license>
-		<PackageIconUrl>https://github.com/Invisionware/Invisionware.Serialization/raw/master/logo.png</PackageIconUrl>
-		<Description>This package implements the Serialization provider contracts for serializers for Json.NET</Description>
-		<PackageReleaseNotes />
-		<Copyright>Copyright © 2019 Invisionware</Copyright>
-		<PackageTags>dictionary xml json serialization serialize invisionware</PackageTags>
+		<Copyright>Copyright © 2020 Invisionware</Copyright>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<AssemblyName>Invisionware.Serialization.JsonNet</AssemblyName>
-		<RootNamespace>Invisionware.Serialization.JsonNet</RootNamespace>
+		<Description>This package implements the Serialization provider contracts for serializers for Json.NET</Description>
+		<PackageTags>dictionary xml json serialization serialize invisionware</PackageTags>
 	</PropertyGroup>
+	
+	<ItemGroup>
+		<None Include="..\..\logo.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 	
 	<ItemGroup>
 		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
