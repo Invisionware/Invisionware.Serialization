@@ -43,7 +43,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invisionware.Serialization.
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		tests\Invisionware.Serialization.Tests.Shared\Invisionware.Serialization.Tests.Shared.projitems*{1aae2b39-dcf8-4260-bc1c-75e70664f669}*SharedItemsImports = 5
 		tests\Invisionware.Serialization.Tests.Shared\Invisionware.Serialization.Tests.Shared.projitems*{2951c80d-fce7-4ca3-bdcf-b88c3477c66c}*SharedItemsImports = 13
+		tests\Invisionware.Serialization.Tests.Shared\Invisionware.Serialization.Tests.Shared.projitems*{32cb02ad-cf32-4b25-a859-aa7fd83fa56e}*SharedItemsImports = 5
+		tests\Invisionware.Serialization.Tests.Shared\Invisionware.Serialization.Tests.Shared.projitems*{c38891e2-c944-4e16-84f4-613f2e72395a}*SharedItemsImports = 5
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
